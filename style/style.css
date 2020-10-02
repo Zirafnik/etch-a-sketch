@@ -1,18 +1,21 @@
 html{
     height: 100%;
     width: 100%;
+
+    overflow-y: none;
 }
 
 body {
-    display: grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 10% 85% 5%;
-    grid-template-areas:
-    "title title"
-    "controls blocks"
-    "footer footer";
+    height: 100%;
+    width: 100%;
 
-    margin: 0;
+    display: grid;
+    grid-template-columns: 10% 20% 60% 10%;
+    grid-template-rows: 7% 88% 5%;
+    grid-template-areas:
+    "title title . ."
+    ". controls blocks ."
+    ". footer footer .";
 }
 
 :root {
@@ -21,6 +24,8 @@ body {
 
 #title {
     grid-area: title;
+    justify-self: center;
+    align-self: center;
 }
 
 #controls {
@@ -32,7 +37,7 @@ body {
 #grid-container {
     grid-area: blocks;
     align-self: center;
-    justify-self: center;
+    justify-self: end;
 
     height: 800px;
     width: 800px;
@@ -53,5 +58,4 @@ body {
 
 #footer {
     grid-area: footer;
-    height: 50px;
 }
