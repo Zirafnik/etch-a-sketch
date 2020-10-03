@@ -19,12 +19,18 @@ function random(min,max) {
 
 const blackColor= document.querySelector('#black');
 const randomColor= document.querySelector('#random');
+const customColor= document.querySelector('#custom');
 function addColor(e) {
     if(blackColor.checked) {
         e.target.style.backgroundColor='black';
     } else if(randomColor.checked) {
-        e.target.classList.remove('grid-element-black');
         e.target.style.backgroundColor='rgb(' + random(0,255) + ', ' + random(0,255) + ', ' + random(0,255) +  ')';
+    } else if(customColor.checked) {
+        let rgb1=document.querySelector('#rgb1');
+        let rgb2=document.querySelector('#rgb2');
+        let rgb3=document.querySelector('#rgb3');
+
+        e.target.style.backgroundColor='rgb(' + rgb1.value + ', ' + rgb2.value + ', ' + rgb3.value + ')';
     }
 }
 
