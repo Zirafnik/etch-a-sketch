@@ -10,18 +10,30 @@ function createGridElements(gridSize) {
 
 createGridElements(256);
 
-container.addEventListener('mouseover', changeColor);
+container.addEventListener('mouseover', addColor);
 
-function changeColor(e) {
-    e.target.classList.add('grid-element-color');
+function random(min,max) {
+    const num = Math.floor(Math.random()*(max-min)) + min;
+    return num;
+  }
+
+function addColor(e) {
+   // if() {
+     //   e.target.classList.add('grid-element-black');
+   // } else if() {
+        e.target.style.backgroundColor='rgb(' + random(0,255) + ', ' + random(0,255) + ', ' + random(0,255) +  ')';
+   // }
 }
 
 //clear
 const clear= document.querySelector('#clear');
 clear.addEventListener('click', clearGrid);
 function clearGrid() {
-    let coloredElements=document.querySelectorAll('.grid-element-color');
-    coloredElements.forEach(div => div.classList.remove('grid-element-color'));
+    let blackElements=document.querySelectorAll('.grid-element-black');
+    blackElements.forEach(div => div.classList.remove('grid-element-black'));
+
+    let randomElements=container.children;
+    Object.keys(randomElements).forEach(key => randomElements[key].style.backgroundColor='white');
 }
 
 //update
@@ -39,7 +51,7 @@ function getGridSize() {
         alert('You must have at least 1 block');
         return;
     }
-    
+
     let lengthSqrd=length**2;
     
     document.querySelectorAll('.grid-element').forEach(div => container.removeChild(div));
