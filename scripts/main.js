@@ -17,21 +17,21 @@ function random(min,max) {
     return num;
   }
 
+const blackColor= document.querySelector('#black');
+const randomColor= document.querySelector('#random');
 function addColor(e) {
-   // if() {
-     //   e.target.classList.add('grid-element-black');
-   // } else if() {
+    if(blackColor.checked) {
+        e.target.style.backgroundColor='black';
+    } else if(randomColor.checked) {
+        e.target.classList.remove('grid-element-black');
         e.target.style.backgroundColor='rgb(' + random(0,255) + ', ' + random(0,255) + ', ' + random(0,255) +  ')';
-   // }
+    }
 }
 
 //clear
 const clear= document.querySelector('#clear');
 clear.addEventListener('click', clearGrid);
 function clearGrid() {
-    let blackElements=document.querySelectorAll('.grid-element-black');
-    blackElements.forEach(div => div.classList.remove('grid-element-black'));
-
     let randomElements=container.children;
     Object.keys(randomElements).forEach(key => randomElements[key].style.backgroundColor='white');
 }

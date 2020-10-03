@@ -52,10 +52,6 @@ body {
     border-width: 1px;
 }
 
-.grid-element-black {
-    background-color: black;
-}
-
 #footer {
     grid-area: footer;
 }
