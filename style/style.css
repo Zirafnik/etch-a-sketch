@@ -10,12 +10,17 @@ body {
     width: 100%;
 
     display: grid;
-    grid-template-columns: 10% 20% 60% 10%;
+    grid-template-columns: 10% 25% 55% 10%;
     grid-template-rows: 7% 88% 5%;
     grid-template-areas:
-    "title title . ."
+    ". title . ."
     ". controls blocks ."
-    ". footer footer .";
+    ". footer . .";
+}
+
+@font-face {
+    font-family: digital;
+    src: url("../style/digital-7.ttf");
 }
 
 :root {
@@ -26,12 +31,72 @@ body {
     grid-area: title;
     justify-self: center;
     align-self: center;
+
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
 }
 
 #controls {
     grid-area: controls;
-    
+
+    font-family: 'Strait', sans-serif;
+
+    display: grid;
+    grid-template-rows: 20% 20% 60%;
+    grid-template-areas:
+    "size"
+    "clear"
+    "colors";
+}
+
+#input {
+    grid-area: size;
+    align-self: center;
+    justify-self: center;
+
     text-align: center;
+}
+
+#input-number {
+    width: 30px;
+}
+
+#clear {
+    grid-area: clear;
+    align-self: center;
+    justify-self: center;
+
+    font-family: 'digital';
+
+    height: 50%;
+    width: 80%;
+}
+
+h2 {
+    font-size: 24px;
+
+    padding: 10px;
+}
+
+#colors {
+   grid-area: colors;
+
+   display: flex;
+   flex-direction: column;
+   justify-self: flex-start;
+   align-self: flex-start;
+
+   padding-top: 40px;
+   padding-left: 30px;
+
+}
+
+.color-input {
+    padding: 10px;
+}
+
+.rgb-input {
+    width: 40px;
 }
 
 #grid-container {
@@ -54,4 +119,11 @@ body {
 
 #footer {
     grid-area: footer;
+}
+
+#github-image {
+    height: 28px;
+    width: 28px;
+
+    margin-top: 6px;
 }

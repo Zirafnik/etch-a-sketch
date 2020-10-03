@@ -5,29 +5,39 @@
 
         <link href="style/reset.css" rel="stylesheet">
         <link href="style/style.css" rel="stylesheet">
+
+        <link href="https://fonts.googleapis.com/css2?family=Strait&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     </head>
     <body>
         <h1 id="title">Etch-a-Sketch</h1>
 
         <div id="controls">
-            <div>
-                <label for="input-number">Choose the grid length:</label>
-                <input id="input-number" type="text" placeholder="number" value="16">
+            <div id="input">
+                <label for="input-number">Choose grid length:</label>
+                <input id="input-number" type="text" placeholder="num" value="16">
                 <button id="update">Update</button>
             </div>
 
             <button id="clear">Clear</button>
 
             <div id="colors">
-                <input id="black" name="color" value="black" type="radio" checked>
-                <label for="black">Black</label>
-                <input id="random" name="color" value="random" type="radio">
-                <label for="random">Rainbow</label>
-                <input id="custom" name="color" value="custom" type="radio">
-                <label for="custom">Custom: rgb(
-                    <input id="rgb1" type="text" placeholder="(0-255)">,
-                    <input id="rgb2" type="text" placeholder="(0-255)">,
-                    <input id="rgb3" type="text" placeholder="(0-255)">)</label>
+                <h2>COLORS:</h2>
+                <div class="color-input">
+                    <input id="black" name="color" value="black" type="radio" checked>
+                    <label for="black">Black</label><br>
+                </div>
+                <div class="color-input">
+                    <input id="random" name="color" value="random" type="radio">
+                    <label for="random">Rainbow</label><br>
+                </div>
+                <div class="color-input">
+                    <input id="custom" name="color" value="custom" type="radio">
+                    <label for="custom">Custom: rgb(
+                        <input class="rgb-input" id="rgb1" type="text" placeholder="(0-255)">,
+                        <input class="rgb-input" id="rgb2" type="text" placeholder="(0-255)">,
+                        <input class="rgb-input" id="rgb3" type="text" placeholder="(0-255)">)</label>
+                </div>
             </div>
 
         </div>
@@ -35,7 +45,12 @@
         <div id="grid-container">
         </div>
 
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <ul id="footer-list">
+                <li id="footer-text">Zirafnik</li>
+                <li><a target="_blank" href="https://github.com/Zirafnik/etch-a-sketch"><img id="github-image" src="images/github.png"></a></li>
+            </ul>
+        </footer>
 
         <script src="scripts/main.js"></script>
     </body>
