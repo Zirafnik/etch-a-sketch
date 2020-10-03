@@ -15,7 +15,7 @@
         <div id="controls">
             <div id="input">
                 <label for="input-number">Choose grid length:</label>
-                <input id="input-number" type="text" placeholder="num" value="16">
+                <input id="input-number" type="text" placeholder="1-100" value="16">
                 <button id="update">Update</button>
             </div>
 
@@ -29,20 +29,20 @@
                 </div>
                 <div class="color-input">
                     <input id="random" name="color" value="random" type="radio">
-                    <label for="random">Rainbow</label><br>
+                    <label for="random" class="rainbow">Rainbow</label><br>
                 </div>
                 <div class="color-input">
                     <input id="custom" name="color" value="custom" type="radio">
                     <label for="custom">Custom: rgb(
-                        <input class="rgb-input" id="rgb1" type="text" placeholder="(0-255)">,
-                        <input class="rgb-input" id="rgb2" type="text" placeholder="(0-255)">,
-                        <input class="rgb-input" id="rgb3" type="text" placeholder="(0-255)">)</label>
+                        <input class="rgb-input" id="rgb1" type="text" placeholder="0-255">,
+                        <input class="rgb-input" id="rgb2" type="text" placeholder="0-255">,
+                        <input class="rgb-input" id="rgb3" type="text" placeholder="0-255">)</label>
                 </div>
             </div>
 
         </div>
 
-        <div id="grid-container">
+        <div id="grid-container" class="starting-background">
         </div>
 
         <footer id="footer">
