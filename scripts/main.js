@@ -5,12 +5,11 @@ function createGridElements(gridSize) {
         let child= document.createElement('div');
         child.classList.add('grid-element');
         container.appendChild(child);
+        child.addEventListener('mouseover', addColor);
     }
 }
 
 createGridElements(256);
-
-container.addEventListener('mouseover', addColor);
 
 function random(min,max) {
     const num = Math.floor(Math.random()*(max-min)) + min;
