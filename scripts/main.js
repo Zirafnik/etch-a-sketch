@@ -50,10 +50,10 @@ function getGridSize() {
     let length= document.querySelector('#input-number').value;
 
     if(length>100) {
-        alert('The maximum length is 100 blocks');
+        alert('The maximum length is 100 blocks!');
         return;
     } else if(length<1) {
-        alert('You must have at least 1 block');
+        alert('You must have at least 1 block!');
         return;
     }
 
